@@ -1,31 +1,37 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<!-- MULTI‑TARGET -->
+		<!--‑‑ MULTI‑TARGET ‑‑-->
 		<TargetFrameworks>net7.0;net8.0;net9.0</TargetFrameworks>
 
-		<!-- DLL -->
+		<!--‑‑ DLL ‑‑-->
 		<OutputType>Library</OutputType>
 		<AssemblyName>JsonAot</AssemblyName>
 		<RootNamespace>JsonAot</RootNamespace>
 
-		<!-- C# Quality -->
+		<!--‑‑ C# QUALITY ‑‑-->
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 
-		<!-- NUGET METADATA -->
+		<!--‑‑ NUGET METADATA ‑‑-->
 		<PackageId>JsonAot</PackageId>
-		<Version>1.0.0</Version>
-		<!-- altere para 1.0.0‑preview, 1.1.0… -->
-		<Authors>Seu Nome ou Org</Authors>
+		<Version>1.0.1</Version>
+		<Authors>José Vitor</Authors>
 		<Description>JSON parser/serializer AOT‑friendly, zero reflection.</Description>
 		<PackageTags>json;aot;parser;serializer;dotnet</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<RepositoryUrl>https://github.com/seuuser/JsonAot</RepositoryUrl>
+		<RepositoryUrl>https://github.com/tekzin/JsonAot</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageReleaseNotes>• Inclui README embutido • Primeira revisão pública</PackageReleaseNotes>
 
-		<!-- gera *.nupkg* no build Release -->
+		<!--‑‑ gera *.nupkg* em Release ‑‑-->
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	</PropertyGroup>
+
+	<!-- garante que o README seja empacotado -->
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="" />
+	</ItemGroup>
 
 </Project>

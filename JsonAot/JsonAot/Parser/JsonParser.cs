@@ -79,8 +79,6 @@ namespace JsonAot.Parser
                 if (_currentToken.Type != TokenType.Colon)
                     throw new System.Exception("Esperado ':' após chave do objeto");
 
-                Console.WriteLine($"[ParseObject] _currentToken={_currentToken.Type}, value='{_currentToken.Value}'");
-
                 Advance(); // consome ':'
                 var value = ParseValue();
 
