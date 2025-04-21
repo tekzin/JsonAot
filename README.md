@@ -60,7 +60,7 @@ var newObj = new JsonObject
         ["hello"] = new JsonString("world")
     }
 };
-string json = MyJsonSerializer.Serialize(newObj); // {"hello":"world"}
+string json = JsonDeserializer.Serialize(newObj); // {"hello":"world"}
 ```
 
 ---
@@ -72,7 +72,7 @@ string json = MyJsonSerializer.Serialize(newObj); // {"hello":"world"}
 | `JsonTokenizer` | Converte string → tokens (`{`, `true`, `number` …) |
 | `JsonParser`    | Tokens → AST (`JsonObject`, `JsonArray` …) |
 | `JsonDeserializer.Parse(string)` | Atalho para obter a AST |
-| `MyJsonSerializer.Serialize(JsonNode)` | AST → string JSON |
+| `JsonDeserializer.Serialize(JsonNode)` | AST → string JSON |
 
 ### Estrutura da AST
 ```text
