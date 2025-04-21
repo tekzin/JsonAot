@@ -1,0 +1,15 @@
+## Build
+bin/
+obj/
+
+## VS config
+.vs/
+
+## User files
+*.user
+*.suo
+*.userprefs
+
+## Rider/VS Code
+.idea/
+.vscode/

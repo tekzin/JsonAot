@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<!-- MULTI‑TARGET -->
+		<TargetFrameworks>net7.0;net8.0;net9.0</TargetFrameworks>
+
+		<!-- DLL -->
+		<OutputType>Library</OutputType>
+		<AssemblyName>JsonAot</AssemblyName>
+		<RootNamespace>JsonAot</RootNamespace>
+
+		<!-- C# Quality -->
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<!-- NUGET METADATA -->
+		<PackageId>JsonAot</PackageId>
+		<Version>1.0.0</Version>
+		<!-- altere para 1.0.0‑preview, 1.1.0… -->
+		<Authors>Seu Nome ou Org</Authors>
+		<Description>JSON parser/serializer AOT‑friendly, zero reflection.</Description>
+		<PackageTags>json;aot;parser;serializer;dotnet</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<RepositoryUrl>https://github.com/seuuser/JsonAot</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+
+		<!-- gera *.nupkg* no build Release -->
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+
+</Project>
