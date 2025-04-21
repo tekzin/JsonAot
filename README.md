@@ -42,7 +42,7 @@ using JsonAot.Ast;
 using JsonAot.Serializer;
 
 // Parse → AST
-JsonNode root = MyJsonDeserializer.Parse(@"{
+JsonNode root = JsonDeserializer.Parse(@"{
   "name":"Neo",
   "skills": ["C#","Hacking"],
   "chosenOne": true
@@ -71,7 +71,7 @@ string json = MyJsonSerializer.Serialize(newObj); // {"hello":"world"}
 |------|-------|
 | `JsonTokenizer` | Converte string → tokens (`{`, `true`, `number` …) |
 | `JsonParser`    | Tokens → AST (`JsonObject`, `JsonArray` …) |
-| `MyJsonDeserializer.Parse(string)` | Atalho para obter a AST |
+| `JsonDeserializer.Parse(string)` | Atalho para obter a AST |
 | `MyJsonSerializer.Serialize(JsonNode)` | AST → string JSON |
 
 ### Estrutura da AST
